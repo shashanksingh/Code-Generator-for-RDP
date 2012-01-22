@@ -1,0 +1,407 @@
+class DECRYPTION_STATUS_BUFFER
+{
+	quint8 NoEncryptedStreams
+}
+
+class FSCTL_CREATE_OR_GET_OBJECT_ID_Reply
+{
+}
+
+class FSCTL_CREATE_OR_GET_OBJECT_ID_Request
+{
+}
+
+class FSCTL_DELETE_OBJECT_ID_Reply
+{
+
+}
+
+class FSCTL_DELETE_OBJECT_ID_Request
+{
+}
+
+class FSCTL_DELETE_REPARSE_POINT_Reply
+{
+
+}
+
+class FSCTL_DELETE_REPARSE_POINT_Request
+{
+
+}
+
+class FSCTL_FILESYSTE GET_STATISTICS_Reply
+{
+
+}
+
+class FSCTL_FILESYSTE GET_STATISTICS_Request
+{
+
+}
+
+class FSCTL_FIND_FILES_BY_SID_Reply
+{
+
+}
+
+class FSCTL_FIND_FILES_BY_SID_Request
+{
+	quint32  Restart
+	QByteArray  sID
+}
+
+class FSCTL_GET_COMPRESSION_Reply
+{
+	quint16  CompressionState
+}
+
+class FSCTL_GET_COMPRESSION_Request
+{
+
+}
+
+class FSCTL_GET_NTFS_VOLUME_DATA_Reply
+{
+	qint64  VolumeSerialNumber
+	qint64  NumberSectors
+	qint64  TotalClusters
+	qint64  FreeClusters
+	qint64  TotalReserved
+	quint32  BytesPerSector
+	quint32  BytesPerCluster
+	quint32  BytesPerFileRecordSegment
+	quint32  ClustersPerFileRecordSegment
+	qint64  MftValidDataLength
+	qint64  MftStartLcn
+	qint64  Mft2StartLcn
+	qint64  MftZoneStart
+	qint64  MftZoneEnd
+}
+
+class FSCTL_GET_NTFS_VOLUME_DATA_Request
+{
+
+}
+
+class FSCTL_GET_OBJECT_ID_Reply
+{
+
+}
+
+class FSCTL_GET_OBJECT_ID_Request
+{
+
+}
+
+class FSCTL_GET_REPARSE_POINT_Reply
+{
+
+}
+
+class FSCTL_GET_REPARSE_POINT_Request
+{
+
+}
+
+class FSCTL_GET_RETRIEVAL_POINTERS_Reply
+{
+	qint64  NextVcn
+	qint64  Lcn
+	quint32 PathNameLength
+	QByteArray  PathName
+}
+
+class FSCTL_GET_RETRIEVAL_POINTERS_Request
+{
+	qint64  StartingVcn
+}
+
+class FSCTL_IS_PATHNAME_VALID_Reply
+{
+
+}
+
+class FSCTL_LMR_SET_LINK_TRACKING_INFORMATION_Reply
+{
+	
+}
+
+class FSCTL_LMR_SET_LINK_TRACKING_INFORMATION_Request
+{
+	QByteArray  TargetLinkTrackingInformationBuffer
+}
+
+class FSCTL_LMR_SET_LINK_TRACKING_INFORMATION_Request_for_SMB
+{
+	quint32  TargetFileObject
+	quint32  TargetLinkTrackingInformationLength
+	QByteArray  TargetLinkTrackingInformationBuffer
+}
+
+class FSCTL_LMR_SET_LINK_TRACKING_INFORMATION_Request_for_SMB2
+{ 
+	quint64  TargetFileObject
+	quint32  TargetLinkTrackingInformationLength
+	QByteArray  TargetLinkTrackingInformationBuffer
+}
+
+
+class FSCTL_PIPE_PEEK_Reply
+{
+	quint32  NamedPipeState
+	quint32  ReadDataAvailable
+	quint32  NumberOfMessages
+	quint32  MessageLength
+	QByteArray  Data
+}
+
+class FSCTL_PIPE_PEEK_request
+{
+
+}
+
+class FSCTL_PIPE_TRANSCEIVE_Reply
+{
+
+}
+
+class FSCTL_PIPE_TRANSCEIVE_Request
+{
+
+}
+
+class FSCTL_PIPE_WAIT_Reply
+{
+
+}
+
+class FSCTL_PIPE_WAIT_Request
+{
+	qint64  Timeout
+	quint32  NameLength
+	quint8  TimeoutSpecified
+	quint8  Padding
+	QByteArray  Name
+}
+
+class FSCTL_QUERY_ALLOCATED_RANGES_Reply
+{
+	qint64  FileOffset
+	qint64  Length
+}
+
+class FSCTL_QUERY_ALLOCATED_RANGES_Request
+{
+	qint64  FileOffset
+	qint64  Length
+}
+
+class FSCTL_QUERY_FAT_BPB_Reply
+{
+
+}
+
+class FSCTL_QUERY_FAT_BPB_Request
+{
+
+}
+
+class FSCTL_QUERY_ON_DISK_VOLUME_INFO_Reply
+{
+	qint64  DirectoryCount
+	qint64  FileCount
+	qint16  FsFormatMajVersion
+	qint16  FsFormatMinVersion
+	QByteArray  FsFormatName
+	quint64  FormatTime
+	quint64  LastUpdateTime
+	QByteArray  CopyrightInfo
+	QByteArray  AbstractInfo
+	QByteArray  FormattingImplementationInfo
+	QByteArray  LastModifyingImplementationInfo
+}
+
+class FSCTL_QUERY_ON_DISK_VOLUME_INFO_Request
+{
+
+}
+
+class FSCTL_QUERY_SPARING_INFO_Reply
+{
+	quint32  SparingUnitBytes
+	quint8  SoftwareSparing
+	QByteArray  Reserved
+	quint32  TotalSpareBlocks
+	quint32  FreeSpareBlocks
+	
+}
+
+class FSCTL_QUERY_SPARING_INFO_Request
+{
+
+}
+
+class FSCTL_READ_FILE_USN_DATA_Reply
+{
+	quint32  RecordLength
+	quint16  MajorVersion
+	quint16  MinorVersion
+	quint64  FileReferenceNumber
+	quint64  ParentFileReferenceNumber
+	qint64  Usn
+	quint64  TimeStamp
+	quint32  Reason
+	quint32  SourceInfo
+	quint32  SecurityId
+	quint32  FileAttributes
+	quint16  FileNameLength
+	quint16  FileNameOffset
+	QByteArray  FileName
+}
+
+class FSCTL_READ_FILE_USN_DATA_Request
+{
+	
+}
+
+class FSCTL_RECALL_FILE_Reply
+{
+
+}
+
+class FSCTL_RECALL_FILE_Request
+{
+
+}
+
+class FSCTL_SET_COMPRESSION_Reply
+{
+
+}
+
+class FSCTL_SET_COMPRESSION_Request
+{
+	quint16  CompressionState
+	
+}
+
+class FSCTL_SET_DEFECT_MANAGEMENT_Reply
+{
+
+}
+
+class FSCTL_SET_DEFECT_MANAGEMENT_Request
+{
+	quint8  Disable
+}
+
+class FSCTL_SET_ENCRYPTION_Reply
+{
+
+}
+
+class FSCTL_SET_ENCRYPTION_Request
+{
+	quint32  EncryptionOperation
+	quint8  Private
+	QByteArray  Padding
+}
+
+class FSCTL_SET_OBJECT_ID_EXTENDED_Reply
+{
+
+}
+
+class FSCTL_SET_OBJECT_ID_EXTENDED_Request
+{
+	QByteArray  ExtendedInfo
+}
+
+class FSCTL_SET_OBJECT_ID_Reply
+{
+
+}
+
+class FSCTL_SET_OBJECT_ID_Request
+{
+
+}
+
+class FSCTL_SET_REPARSE_POINT_Reply
+{
+
+}
+
+class FSCTL_SET_REPARSE_POINT_Request
+{
+
+}
+
+class FSCTL_SET_SPARSE_Reply
+{
+
+}
+
+class FSCTL_SET_SPARSE_Request
+{
+	quint8  SetSparse
+}
+
+class FSCTL_SET_ZERO_DATA_Reply
+{
+
+}
+
+class FSCTL_SET_ZERO_DATA_Request
+{
+	qint64  FileOffset
+	qint64  BeyondFinalZero
+}
+
+class FSCTL_SET_ZERO_ON_DEALLOCATION_Reply
+{
+
+}
+
+class FSCTL_SET_ZERO_ON_DEALLOCATION_Request
+{
+
+}
+
+class FSCTL_SIS_COPYFILE_Reply
+{
+
+}
+
+class FSCTL_SIS_COPYFILE_Request
+{
+	quint32  SourceFileNameLength
+	quint32  DestinationFileNameLength
+	quint32  Flags
+	QByteArray  SourceFileName
+	QByteArray  DestinationFileName
+}
+
+class FSCTL_WRITE_USN_CLOSE_RECORD_Reply
+{
+
+}
+
+class FSCTL_WRITE_USN_CLOSE_RECORD_Request
+{
+
+}
+
+class TARGET_LINK_TRACKING_INFORMATION_Buffer_1
+{
+	QByteArray  NetBIOSName
+}
+
+class TARGET_LINK_TRACKING_INFORMATION_Buffer_2
+{
+	quint32  Type
+	quint16  VolumeId
+	quint16  ObjectId
+	QByteArray  NetBIOSName
+}

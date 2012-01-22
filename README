@@ -1,3 +1,13 @@
 
 Sun Jan 22 21:12:07 IST 2012
 this simple code can generate c++/qt code [classes] for decoding and generatign ms-rdpbcgr protocol strucutres aka microsoft RDP protocol 
+
+
+Sun Jan 22 21:17:44 IST 2012
+look at demo.def on how to create defination files which will generate the code inside generated directory 
+the demo.def has defination for different related documents of ms-rdpbcgr aka MS Remote dekstop 
+but the first class is from [ms-fscc] http://msdn.microsoft.com/en-us/library/ff359535(v=prot.10).aspx
+
+The code has a Lexer written usign Reg EX
+it has syntax checker written using if else contructs in qt/c++
+and code generator/I.L. also written in QT/c++ 
